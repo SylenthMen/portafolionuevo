@@ -1,0 +1,37 @@
+---
+const { title } = Astro.props;
+const { desc } = Astro.props;
+import Navbar from "@components/Navbar.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={desc} />
+    <title>{title}</title>
+    <style>
+      .bolita {
+        margin: auto;
+        transform: translateY(-350px);
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          circle,
+          rgba(75, 0, 130, 0.8) 0%,
+          rgba(75, 0, 130, 0) 70%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body class="bg-[#e1e1e1] dark:bg-[#090909] text-black dark:text-white">
+    <Navbar />
+    <div class="bolita"></div>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,92 @@
+---
+import CardProyects from "@components/CardProyects.astro";
+import Sql from "@components/icons/Sql.astro";
+import Wordpress from "@components/icons/Wordpress.astro";
+import IconAstro from "@components/icons/IconAstro.astro";
+import Next from "@components/icons/Next.astro";
+import Python from "./icons/Python.astro";
+import JavaS from "./icons/JavaS.astro";
+---
+
+<section
+  id="proyectos"
+  class="container mx-auto p-4 -translate-y-[500px] font-berlin"
+>
+  <h2 class="text-5xl font-bold text-center mb-8">Proyectos</h2>
+  <div class="flex flex-wrap justify-center gap-6">
+    <CardProyects
+      image="/img/proj1.png"
+      titulo="Farmacia Veterinaria Dr.Canino"
+      descripcion="Landing page y comercio electrónico para la venta de productos"
+      enlace="https://farmaciaveterinariadrcanino.com"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="MySQL"><Sql alto="36" ancho="36" /></abbr>
+        <abbr title="WordPress"><Wordpress alto="36" ancho="36" /></abbr>
+        <abbr title="Astro"><IconAstro alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+    <CardProyects
+      image="/img/proj2.png"
+      titulo="Picteligence"
+      descripcion="Aplicación para crear imágenes con inteligencia artificial"
+      enlace="https://picteligence.site"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="NextJS"><Next alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+    <CardProyects
+      image="/img/proj3.png"
+      titulo="Chat Pdf"
+      descripcion="Aplicación para resumir documentos PDF con ayuda de inteligencia artificial"
+      enlace="https://chateapdf.sylenthmen.site/"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="Python"><Python alto="36" ancho="36" /></abbr>
+        <abbr title="JavaScript"><JavaS alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+    <CardProyects
+      image="/img/proj4.png"
+      titulo="Consultora Pro Gestión B&S Asociados"
+      descripcion="Aplicación para resumir documentos PDF con ayuda de inteligencia artificial"
+      enlace="https://consultora-pro-gestion-bys-asociados.vercel.app/"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="Astro"><IconAstro alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+    <CardProyects
+      image="/img/proj5.png"
+      titulo="Galeria de links"
+      descripcion="Galeria de links personalizada"
+      enlace="https://links.sylenthmen.site"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="Astro"><IconAstro alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+    <CardProyects
+      image="/img/proj6.webp"
+      titulo="Skull Island Records"
+      descripcion="sitio oficial del sello discografico, blog y tienda"
+      enlace="https://skullislandrecords.com"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="Astro"><IconAstro alto="36" ancho="36" /></abbr>
+        <abbr title="WordPress"><Wordpress alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+    <CardProyects
+      image="/img/proj7.webp"
+      titulo="Lic. Citlali"
+      descripcion="Landinf page de la fisioterapeuta citlali"
+      enlace="https://liccitlali.netlify.app/"
+    >
+      <div class="flex items-center" slot="tecnologias">
+        <abbr title="Astro"><IconAstro alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
+  </div>
+</section>

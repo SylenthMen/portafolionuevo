@@ -5,16 +5,13 @@ const { descripcion } = Astro.props;
 const { enlace } = Astro.props;
 ---
 
-<article
-  id="proyectos"
-  class="overflow-hidden text-center font-berlin -translate-y-[500px]"
->
+<article class="overflow-hidden text-center font-berlin dark:bg-black">
   <div>
     <img src={image} alt="project image" />
   </div>
   <div>
-    <h2 class="font-bold text-3xl mt-4">{titulo}</h2>
-    <p class="py-2 text-xl">{descripcion}</p>
+    <h2 class="font-bold text-3xl mt-4 p-2">{titulo}</h2>
+    <p class="p-2 text-xl">{descripcion}</p>
   </div>
   <div class="py-2 m-auto justify-center items-center flex">
     <slot name="tecnologias" />
@@ -28,9 +25,28 @@ const { enlace } = Astro.props;
 
 <style>
   article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 2px solid #5600bc;
     border-radius: 25px;
-    width: 350px;
+    max-width: 340px;
+    height: 520px;
+    animation: Blurcito infinite 2s;
+  }
+
+  @keyframes Blurcito {
+    0% {
+      box-shadow: 0 0 0 0 #5600bc25;
+    }
+
+    50% {
+      box-shadow: 5px 5px 5px 5px #5600bc25;
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 #5600bc25;
+    }
   }
 
   article img {

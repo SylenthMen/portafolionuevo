@@ -1,6 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
+import CardProyects from "@components/CardProyects.astro";
+import Sql from "@components/icons/Sql.astro";
+import Wordpress from "@components/icons/Wordpress.astro";
+import IconAstro from "@components/icons/IconAstro.astro";
 ---
 
 <Layout
@@ -9,5 +13,17 @@ import Hero from "@components/Hero.astro";
 >
   <main>
     <Hero />
+    <CardProyects
+      image="/img/proj1.png"
+      titulo="Farmacia Veterinaria Dr.Canino"
+      descripcion="landing page y comercio electronico para la venta de productos"
+      enlace="https://farmaciaveterinariadrcanino.com"
+    >
+      <div class="flex" slot="tecnologias">
+        <abbr title="MySqul"><Sql alto="36" ancho="36" /></abbr>
+        <abbr title="Wordpress"><Wordpress alto="36" ancoh="36" /></abbr>
+        <abbr title="Astro"><IconAstro alto="36" ancho="36" /></abbr>
+      </div>
+    </CardProyects>
   </main>
 </Layout>

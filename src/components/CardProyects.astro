@@ -1,0 +1,64 @@
+---
+const { image } = Astro.props;
+const { titulo } = Astro.props;
+const { descripcion } = Astro.props;
+const { enlace } = Astro.props;
+---
+
+<article
+  id="proyectos"
+  class="overflow-hidden text-center font-berlin -translate-y-[500px]"
+>
+  <div>
+    <img src={image} alt="project image" />
+  </div>
+  <div>
+    <h2 class="font-bold text-3xl mt-4">{titulo}</h2>
+    <p class="py-2 text-xl">{descripcion}</p>
+  </div>
+  <div class="py-2 m-auto justify-center items-center flex">
+    <slot name="tecnologias" />
+  </div>
+
+  <div class="pb-2">
+    <a class="texto-degradado text-2xl" target="_blank" href={enlace}>visitar</a
+    >
+  </div>
+</article>
+
+<style>
+  article {
+    border: 2px solid #5600bc;
+    border-radius: 25px;
+    width: 350px;
+  }
+
+  article img {
+    height: 250px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+  }
+
+  article:hover img {
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
+  }
+
+  .texto-degradado {
+    background: linear-gradient(to right, #5600bc, #ff35ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+
+  .texto-degradado:hover {
+    background: linear-gradient(to right, #ff35ff, #5600bc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+  }
+</style>

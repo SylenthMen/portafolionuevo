@@ -33,7 +33,9 @@ import Navbar from "@components/Navbar.astro";
     </style>
   </head>
   <body class="bg-[#e1e1e1] dark:bg-[#090909] text-black dark:text-white">
-    <Navbar />
+    <div class="fixed w-full z-50">
+      <Navbar />
+    </div>
     <div class="bolita"></div>
     <slot />
   </body>
